@@ -15,38 +15,41 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: #022161;
+  --color-angola-red: #cc092f;
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html, body {
+html,
+body {
   font-family: var(--font-body);
-  color: #00091A;
+  color: #00091a;
 }
 
-h1, h2, h3, h4, h5, h6, .heading-font {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.heading-font {
   font-family: var(--font-heading);
 }
 
-
 body {
-  background: var(--background);
+  background: linear-gradient(to right, #fcfcfc, #fafafa);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
 
+.btn {
+  border-radius: 16px;
+}
 
 /* Make DaisyUI's .btn-primary use the requested gradient */
 .btn-primary {
   @apply border-0 text-white;
-  background-image: linear-gradient(to right, #022161, #233F75);
+  background-image: linear-gradient(to right, #022161, #233f75);
 }
 
 /* Optional: ensure hover/focus states feel nice on gradient */
@@ -54,11 +57,76 @@ body {
   filter: brightness(1.05);
 }
 .btn-primary:focus-visible {
-  outline: 2px solid #233F75;
+  outline: 2px solid #233f75;
   outline-offset: 2px;
 }
 
+.btn-secondary {
+  @apply border-0 text-[#0D1B2A];
+  background-image: linear-gradient(to right, white, #dadfe2);
+}
+
+/* Optional: ensure hover/focus states feel nice on gradient */
+.btn-secondary:hover {
+  filter: brightness(1.05);
+}
+.btn-secondary:focus-visible {
+  outline: 2px solid #dadfe2;
+  outline-offset: 2px;
+}
 
 .custom-container {
-  @apply mx-auto w-[90%];
+  @apply mx-auto w-[70%];
+}
+
+.heading-8xl {
+  @apply text-5xl md:text-8xl;
+}
+
+.heading-6xl {
+  @apply text-3xl md:text-6xl;
+}
+
+.heading-5xl {
+  @apply text-2xl md:text-5xl;
+}
+
+.heading-4xl {
+  @apply text-2xl md:text-4xl;
+}
+
+.heading-3xl {
+  @apply text-xl md:text-3xl;
+}
+
+.heading-2xl {
+  @apply text-lg md:text-2xl;
+}
+
+.heading-xl {
+  @apply text-sm md:text-xl;
+}
+
+.heading-lg {
+  @apply text-base md:text-lg font-medium;
+}
+
+.body-2xl {
+  @apply text-base md:text-2xl;
+}
+
+.bg-blue {
+  @apply bg-linear-to-r from-[#D0E0F3] to-[#E4EDF8];
+}
+
+.bg-blue--light {
+  @apply bg-linear-to-r from-[#D7E5F5] to-[#EBF2FA];
+}
+
+.bg-blue--lighter {
+  @apply bg-linear-to-r from-[#DDE9F6] to-[#F1F6FB];
+}
+
+.bg-gradient--white {
+  @apply bg-linear-to-b from-white/80 to-white/95;
 }

@@ -4,29 +4,35 @@ export const Hero = () => {
 
 
     return (
-        <div className="h-screen bg-[url('/HeroBg.png')] bg-cover bg-center ">
+        <div className="h-screen bg-[url('/HeroBg.png')] bg-cover bg-center relative ">
+            <div className="bg-black/45 absolute h-full w-full"></div>
             <div className="grid grid-cols-12 custom-container h-full items-center">
-                <div className="col-span-12 xl:col-span-7">
-                    <h1>Powering Angola’s Mining Future.</h1>
-                    <h3>From prospecting to operations, we provide the clarity, compliance, and local support you need to succeed in Angola</h3>
-                    <button className="btn" type="button">KNOW MORE <ArrowCircleDownIcon /></button>
+                <div className="col-span-12 xl:col-span-7 z-[1] ">
+                    <h1 className="heading-8xl font-extrabold text-white">Powering Angola’s Mining Future.</h1>
+                    <h3 className="heading-4xl mt-4 xl:w-3/4 text-white">From prospecting to operations, we provide the clarity, compliance, and local support you need to succeed in Angola</h3>
+                    <button className="btn btn-xl btn-secondary mt-6" type="button">KNOW MORE <ArrowCircleDownIcon size={28} /></button>
                 </div>
-                <div className="grid gap-4 col-span-12 xl:col-start-9 xl:col-span-3">
-                    <div className="card w-full bg-base-100 card-md shadow-sm">
+                <div className="grid gap-4 col-span-12 xl:col-start-9 xl:col-span-4">
+                    <div className="card bg-blue w-full bg-base-100 card-md shadow-sm">
                         <div className="card-body">
-                            <p>“We don’t just provide services, we become partners in your success”</p>
+                            <p className="heading-3xl italic text-neutral w-2/3">“We don’t just provide services, <span className="font-semibold">we become partners in your success</span>”</p>
+                            <img src="/pickaxe.png" className="h-[76px] w-[76px] object-cover absolute right-[24px] bottom-[24px]" alt="" />
+
                         </div>
                     </div>
-                    <div className="card w-full bg-base-100 card-md shadow-sm">
+                    <div className="card bg-blue--light w-full bg-base-100 card-md shadow-sm">
                         <div className="card-body">
-                            <p>00+</p>
-                            <p>Satisfied Partners</p>
+                            <p className="heading-font heading-6xl text-neutral font-black">00+</p>
+                            <p className="heading-3xl text-neutral body-font">Satisfied Partners</p>
+                            <img src="/rocket.png" className="h-[76px] w-[76px] object-cover absolute right-[24px] bottom-[24px]" alt="" />
+
                         </div>
                     </div>
-                    <div className="card w-full bg-base-100 card-md shadow-sm">
+                    <div className="card bg-blue--lighter w-full bg-base-100 card-md shadow-sm">
                         <div className="card-body">
-                            <p>000k</p>
-                            <p>Some Metric</p>
+                            <p className="heading-font heading-6xl text-neutral font-black">000k</p>
+                            <p className="heading-3xl text-neutral body-font" >Some Metric</p>
+                            <img src="/trophy.png" className="h-[76px] w-[76px] object-cover absolute right-[24px] bottom-[24px]" alt="" />
                         </div>
                     </div>
                 </div>

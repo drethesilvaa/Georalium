@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Lato, Karla } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -32,7 +34,11 @@ export default function RootLayout({
       <body
         className={`${lato.variable} ${karla.variable} min-h-dvh antialiased`}
       >
-        <SmoothScroll>{children}</SmoothScroll>
+        <Navbar />
+        {/* <SmoothScroll> */}
+          {children}
+        {/* </SmoothScroll> */}
+        <Footer />
       </body>
     </html>
   );
