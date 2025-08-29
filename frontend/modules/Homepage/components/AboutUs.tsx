@@ -1,5 +1,38 @@
-export const AboutUs = () => {
+import Slider from "@/components/Slider"
 
+const teamimagesData = [{
+    image: "https://placehold.co/400",
+    alt: "placeholder",
+},{
+    image: "https://placehold.co/400",
+    alt: "placeholder",
+},{
+    image: "https://placehold.co/400",
+    alt: "placeholder",
+},{
+    image: "https://placehold.co/400",
+    alt: "placeholder",
+},{
+    image: "https://placehold.co/400",
+    alt: "placeholder",
+},{
+    image: "https://placehold.co/400",
+    alt: "placeholder",
+},{
+    image: "https://placehold.co/400",
+    alt: "placeholder",
+},{
+    image: "https://placehold.co/400",
+    alt: "placeholder",
+},{
+    image: "https://placehold.co/400",
+    alt: "placeholder",
+},{
+    image: "https://placehold.co/400",
+    alt: "placeholder",
+}]
+
+export const AboutUs = () => {
 
     return (
         <div className="py-28">
@@ -65,12 +98,14 @@ export const AboutUs = () => {
 
             </div>
             <section className="mt-32">
-                <div  className="custom-container">
+                <div className="custom-container">
                     <h3 className="heading-4xl font-semibold">A Multi-Disciplinary Team Dedicated to Mining Excellence</h3>
                     <h4 className="heading-2xl">International specialists with decades of experience; deep knowledge of mining standards.</h4>
                 </div>
-                <div>
-                    Carrousel with images
+                <div className="my-10">
+                    <Slider pagination={false} navigation slidesPerView={6} items={teamimagesData?.map((image) => (
+                        <img src={image.image} alt={image.alt} className="" />
+                    ))} />
                 </div>
                 <div className="text-right flex justify-end px-4 ">
                     <p className="heading-3xl italic w-2/4">“Behind every <strong>successful</strong> project is a team that knows
@@ -81,7 +116,7 @@ export const AboutUs = () => {
                 <div className="grid grid-cols-2 custom-container ">
                     <div> Map </div>
                     <div className="font-bold">
-                        <p className="heading-5xl w-[55%]">Our Presence Across <span className="text-angola-red">Angola</span> 
+                        <p className="heading-5xl w-[55%]">Our Presence Across <span className="text-angola-red">Angola</span>
                         </p>
                         <p className="body-2xl"> Luanda • Huambo • Lubango • Saurimo</p>
                     </div>
