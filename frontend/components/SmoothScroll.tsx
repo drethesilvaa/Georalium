@@ -1,15 +1,17 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import LocomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/dist/locomotive-scroll.css";
+import { LocoProvider, LocoType } from "@/providers/LocoProvider";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
-type Props = {
-  children: React.ReactNode;
-};
+type Props = { children: React.ReactNode };
 
 export default function SmoothScroll({ children }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const [loco, setLoco] = useState<LocoType>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -23,19 +25,25 @@ export default function SmoothScroll({ children }: Props) {
       tablet: { smooth: true },
     });
 
-    // Update on route change or resize if needed
+    setLoco(scroll);
+
     const resizeHandler = () => scroll.update();
     window.addEventListener("resize", resizeHandler);
 
     return () => {
       window.removeEventListener("resize", resizeHandler);
       scroll.destroy();
+      setLoco(null);
     };
   }, []);
 
   return (
-    <div id="scroll-container" data-scroll-container ref={containerRef}>
-      {children}
-    </div>
+    <LocoProvider value={loco}>
+      <Navbar />
+      <div id="scroll-container" data-scroll-container ref={containerRef}>
+        {children}
+        <Footer />
+      </div>
+    </LocoProvider>
   );
 }

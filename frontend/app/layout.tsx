@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { Lato, Karla } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -30,15 +28,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="light">
       <body
-        className={`${lato.variable} ${karla.variable} min-h-dvh antialiased`}
+        className={`${lato.variable} ${karla.variable} antialiased`}
       >
-        <Navbar />
-        {/* <SmoothScroll> */}
+
+        <SmoothScroll>
           {children}
-        {/* </SmoothScroll> */}
-        <Footer />
+        </SmoothScroll>
       </body>
     </html>
   );

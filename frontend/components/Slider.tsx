@@ -4,27 +4,32 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { motion, type Variants } from "framer-motion";
 import { Navigation, Pagination, Autoplay, A11y } from "swiper/modules";
 import type { ReactNode } from "react";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import "swiper/css/navigation";
+
 
 export default function Slider({
     items,
     auto = true,
+    loop = true,
+    animation = true,
     navigation = false,
+    center = false,
     pagination = true,
     className = "",
     slidesPerView = 1,
-    spaceBetween
+    spaceBetween,
+    breakpoints
 }: {
     items: ReactNode[];
     auto?: boolean;
+    loop?: boolean;
+    animation?: boolean;
     navigation?: boolean;
     pagination?: boolean;
+    center?: boolean;
     className?: string;
     slidesPerView?: number;
     spaceBetween?: number | string
+    breakpoints?: {};
 }) {
 
 
@@ -42,19 +47,18 @@ export default function Slider({
     };
 
     return (
-        <div className={`relative w-full overflow-hidden ${className}`}>
+        <div className={`relative w-full overflow-hidden ${className} `}>
             <Swiper
                 modules={[Pagination, Autoplay, Navigation, A11y]}
                 slidesPerView={slidesPerView}
                 spaceBetween={spaceBetween}
-                loop
+                loop={loop}
+                centeredSlides={center}
                 navigation={navigation}
-                pagination={pagination ? { clickable: true } : false}
+                pagination={pagination ? { clickable: true, bulletClass: "paginationCustomBullet", bulletActiveClass: "paginationCustomActiveBullet" } : false}
                 autoplay={auto ? { delay: 3500, disableOnInteraction: false } : false}
-                className="mySwiper pb-10"
-                breakpoints={{
-                    // 0: { slidesPerView: 1 },
-                }}
+                className={`mySwiper ${pagination ? "big-padding" : "pb-10"}  `}
+                breakpoints={breakpoints}
             >
                 {items?.map((item, index) => (
                     <SwiperSlide key={index} className={className ?? "pb-10"}>
@@ -62,7 +66,7 @@ export default function Slider({
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.3 }}
-                            variants={slideVariants}
+                            variants={animation ? slideVariants : undefined}
                             custom={index}
                         >
                             {item}

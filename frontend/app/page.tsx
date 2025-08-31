@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import { AboutUs } from "@/modules/Homepage/components/AboutUs";
 import { Contacts } from "@/modules/Homepage/components/Contacts";
 import { Hero } from "@/modules/Homepage/components/Hero";
@@ -9,11 +8,11 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      <Hero />
-      <AboutUs />
-      <Services />
-      <Solutions />
-      <Contacts />
+        <Hero />
+        <AboutUs />
+        <Services />
+        <Solutions />
+        <Contacts />
     </>
   );
 }

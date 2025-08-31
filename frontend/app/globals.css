@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@import "swiper/css";
+@import "swiper/css/pagination";
+@import "swiper/css/autoplay";
+@import "swiper/css/navigation";
 @plugin "daisyui";
 
 :root {
@@ -42,6 +46,15 @@ body {
   color: var(--foreground);
 }
 
+.navbar {
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3px);
+  filter: url("/glassDistorion.svg");
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
 .btn {
   border-radius: 16px;
 }
@@ -75,8 +88,28 @@ body {
   outline-offset: 2px;
 }
 
+.btn-glass {
+  backdrop-filter: blur(3px);
+  filter: url("/glassDistorion.svg");
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
+
+.btn-glass:hover {
+  filter: brightness(1.05);
+}
+.btn-glass:focus-visible {
+  outline: 2px solid #dadfe2;
+  outline-offset: 2px;
+}
+
+.btn-glass--dark {
+  background: rgba(0, 0, 0, 0.35);
+}
+
 .custom-container {
-  @apply mx-auto w-[70%];
+  @apply mx-auto w-[90%] md:w-[70%];
 }
 
 .heading-8xl {
@@ -129,4 +162,102 @@ body {
 
 .bg-gradient--white {
   @apply bg-linear-to-b from-white/80 to-white/95;
+}
+
+/* Slider */
+
+.swiper-button-prev,
+.swiper-button-next {
+  color: white !important;
+}
+
+.mySwiper.big-padding {
+  padding-bottom: 78px !important;
+}
+
+.swiper-pagination {
+}
+
+.paginationCustomBullet {
+  display: inline-block;
+  width: 67px;
+  height: 9px;
+  margin: 0 12px;
+  backdrop-filter: blur(3px);
+  filter: url("/glassDistorion.svg");
+  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+  @apply bg-white/10;
+}
+.paginationCustomActiveBullet {
+  @apply bg-white/90;
+}
+
+.slider--solutions .swiper-slide-next {
+  filter: blur(0.5);
+  filter: brightness(0.4);
+  transform:translateX(-50px);
+  scale: 0.8;
+}
+
+.slider--solutions .swiper-slide-prev {
+  filter: blur(0.5);
+  filter: brightness(0.4);
+  transform:translateX(50px);
+  scale: 0.8;
+}
+
+/* Glass */
+
+.liquidGlass-wrapper {
+  position: relative;
+  display: flex;
+  font-weight: 600;
+  overflow: hidden;
+  justify-content: center;
+
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
+
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 2.2);
+}
+
+.liquidGlass-effect {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+
+  backdrop-filter: blur(3px);
+  filter: url("/glassDistorion.svg");
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.liquidGlass-tint {
+  z-index: 1;
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.liquidGlass-shine {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+
+  overflow: hidden;
+
+  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Cards */
+
+.solution--card {
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
+    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(3px);
+  filter: url("/glassDistorion.svg");
+
+  @apply rounded-xl;
 }
