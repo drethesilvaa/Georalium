@@ -27,12 +27,12 @@ const servicesData = [{
 
 export const Services = () => {
     return (
-        <div className="h-screen bg-[url('/ServicesBg.png')] bg-cover bg-center relative">
+        <div data-scroll-section className="h-screen bg-[url('/ServicesBg.png')] bg-cover bg-center relative">
             {/* Option A: let overlay exist but not capture events */}
             <div className="bg-black/40 absolute inset-0 pointer-events-none"></div>
 
             {/* Make this positioned so z-index applies */}
-            <div className="grid custom-container h-full items-center relative z-10">
+            <div id="services" className="grid custom-container h-full items-center relative z-10">
                 <div className="text-white">
                     <h4 className="heading-3xl">From Prospecting to Production</h4>
                     <h3 className="heading-5xl font-semibold">Services That Drive Growth</h3>

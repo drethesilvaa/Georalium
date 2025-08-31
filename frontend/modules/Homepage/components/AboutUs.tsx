@@ -1,3 +1,4 @@
+import { ANGOLA_PINS, MapWithPins } from "@/components/MapWithPins"
 import Slider from "@/components/Slider"
 import { MapPinIcon } from "@phosphor-icons/react/dist/ssr"
 
@@ -38,7 +39,7 @@ export const AboutUs = () => {
     return (
         <div className="py-28">
             <div className="custom-container grid gap-32">
-                <section>
+                <section id="who-we-are" data-scroll-section  >
                     <div className="text-center">
                         <h2 className="heading-6xl font-extrabold">Who We Are</h2>
                         <h3 className="heading-4xl">A Trusted Partner in Angola’s Mining & Energy</h3>
@@ -58,7 +59,7 @@ export const AboutUs = () => {
                         </div>
                     </div>
                 </section>
-                <section>
+                <section data-scroll-section>
                     <div>
                         <h3 className="heading-4xl font-semibold">Bringing Efficiency Through Innovative IT Services</h3>
                         <h4 className="heading-2xl">Technology that supports operations at every stage</h4>
@@ -114,9 +115,8 @@ export const AboutUs = () => {
                         ]} />
                     </div>
                 </section>
-
             </div>
-            <section className="mt-32">
+            <section data-scroll-section className="mt-32">
                 <div className="custom-container">
                     <h3 className="heading-4xl font-semibold">A Multi-Disciplinary Team Dedicated to Mining Excellence</h3>
                     <h4 className="heading-2xl">International specialists with decades of experience; deep knowledge of mining standards.</h4>
@@ -127,25 +127,13 @@ export const AboutUs = () => {
                     ))} />
                 </div>
                 <div className="text-right flex justify-end px-4 ">
-                    <p className="heading-3xl italic w-2/4">“Behind every <strong>successful</strong> project is a team that knows
+                    <p className="heading-3xl italic w-full lg:w-2/4">“Behind every <strong>successful</strong> project is a team that knows
                         the <strong>ground</strong>, the <strong>market</strong>, and the <strong>people”</strong></p>
                 </div>
             </section>
-            <section className="mt-32">
-                <div className="flex items-center justify-center shrink-0 custom-container">
-                    <div className="grid lg:flex gap-6 items-center justify-items-center">
-                        <div className="bg-[url('/AngolaMap.png')] w-[320px] h-[350px] bg-cover flex  relative">
-                            <div className="absolute top-20 left-5">
-                                <MapPinIcon size={46} />
-                            </div>
-                        </div>
-                        <div className="font-bold">
-                            <p className="heading-5xl w-[55%]">Our Presence Across <span className="text-angola-red">Angola</span>
-                            </p>
-                            <p className="body-2xl"> Luanda • Huambo • Lubango • Saurimo</p>
-                        </div>
-                    </div>
-                </div>
+            <section data-scroll-section className="mt-32">
+                <MapWithPins imageSrc="/AngolaMap.png" pins={ANGOLA_PINS} />
+
             </section>
         </div>
     )

@@ -132,7 +132,7 @@ export const ContactForm: React.FC<Props> = ({
                     <ErrorMessage className="text-error" name="message" component="div" />
 
                     {/* reCAPTCHA (v2 Checkbox). For v2 Invisible, set size="invisible" and call execute() before submit */}
-                    <div aria-live="polite" aria-atomic="true">
+                    <div aria-live="polite" aria-atomic="true" className="overflow-auto">
                         <ReCAPTCHA
                             ref={recaptchaRef}
                             sitekey={recaptchaSiteKey}

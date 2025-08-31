@@ -52,10 +52,10 @@ export const Solutions = () => {
     }]
 
     return (
-        <div className="min-h-screen h-full py-28 bg-[url('/SolutionsBg.png')] bg-cover bg-center relative ">
+        <div data-scroll-section className="min-h-screen h-full py-28 bg-[url('/SolutionsBg.png')] bg-cover bg-center relative ">
             <div className="bg-black/75 absolute h-full w-full top-0"></div>
             <div className="grid h-full items-center">
-                <div className="text-white z-10">
+                <div id="solutions" className="text-white z-10">
                     <h4 className="custom-container heading-6xl uppercase text-center font-extrabold">Solutions For Everyone</h4>
                     <div className="grid mt-10 px-6">
                         <Slider
@@ -102,7 +102,7 @@ export const Solutions = () => {
                                         </div>
                                     </div>
                                     <div className="flex items-center justify-center mt-10">
-                                        <button className="btn btn-glass btn-glass--dark btn-xl uppercase font-normal text-white">{item.ctaButton}</button>
+                                        <button className="btn btn-glass btn-glass--dark md:btn-xl uppercase font-normal text-white">{item.ctaButton}</button>
                                     </div>
                                 </Fragment>
                             ))}

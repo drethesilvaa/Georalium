@@ -49,6 +49,7 @@ export default function Slider({
     return (
         <div className={`relative w-full overflow-hidden ${className} `}>
             <Swiper
+                slidesPerGroupAuto
                 modules={[Pagination, Autoplay, Navigation, A11y]}
                 slidesPerView={slidesPerView}
                 spaceBetween={spaceBetween}

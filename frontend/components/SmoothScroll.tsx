@@ -37,6 +37,7 @@ export default function SmoothScroll({ children }: Props) {
     };
   }, []);
 
+
   return (
     <LocoProvider value={loco}>
       <Navbar />
