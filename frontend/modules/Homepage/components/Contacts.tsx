@@ -7,7 +7,7 @@ export const Contacts = () => {
 
 
     return (
-        <div data-scroll-section className="min-h-screen h-full py-28">
+        <div id="contacts" data-scroll-section className="min-h-screen h-full py-28">
             <div className="custom-container grid gap-32">
                 <section>
                     <div className="text-center">

@@ -37,7 +37,7 @@ export default function Navbar() {
             </div>
 
             <div className="navbar-end">
-                <a className="btn btn-primary">
+                <a href="#contacts" onClick={onAnchorClick} className="btn btn-primary">
                     Get in Touch <ArrowCircleRightIcon size={24} />
                 </a>
             </div>
