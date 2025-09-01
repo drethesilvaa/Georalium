@@ -30,7 +30,6 @@ export default function SmoothScroll({ children }: Props) {
         smooth: true,
         multiplier: 1.1,
         lerp: 0.08,
-        smartphone: { smooth: true },
         tablet: { smooth: true },
       });
 
