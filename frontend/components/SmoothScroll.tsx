@@ -5,12 +5,14 @@ import "locomotive-scroll/dist/locomotive-scroll.css";
 import { LocoProvider, LocoType } from "@/providers/LocoProvider";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Loader from "./Loader";
 
 type Props = { children: React.ReactNode };
 
 export default function SmoothScroll({ children }: Props) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [loco, setLoco] = useState<LocoType>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     // SSR/Prerender guard
@@ -26,13 +28,14 @@ export default function SmoothScroll({ children }: Props) {
       scroll = new LocomotiveScroll({
         el: containerRef.current!,
         smooth: true,
-        multiplier: 2,
+        multiplier: 1.1,
         lerp: 0.08,
         smartphone: { smooth: true },
         tablet: { smooth: true },
       });
 
       setLoco(scroll);
+      setLoading(false);
 
       resizeHandler = () => scroll.update();
       window.addEventListener("resize", resizeHandler);
@@ -46,12 +49,15 @@ export default function SmoothScroll({ children }: Props) {
   }, []);
 
   return (
-    <LocoProvider value={loco}>
-      <Navbar />
-      <div id="scroll-container" data-scroll-container ref={containerRef}>
-        {children}
-        <Footer />
-      </div>
-    </LocoProvider>
+    <>
+      {loading && <Loader />}
+      <LocoProvider value={loco}>
+        <Navbar />
+        <div id="scroll-container" data-scroll-container ref={containerRef}>
+          {children}
+          <Footer />
+        </div>
+      </LocoProvider>
+    </>
   );
 }

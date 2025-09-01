@@ -42,7 +42,7 @@ export const Hero = () => {
                     </div>
                 </div>
                 <div className="grid xl:hidden gap-4 col-span-12">
-                    <Slider pagination={false} slidesPerView={1} items={[
+                    <Slider animation={false} pagination={false} slidesPerView={1} items={[
                         <div className="card bg-blue w-full h-full bg-base-100 card-md shadow-sm">
                             <div className="card-body">
                                 <p className="heading-xl italic text-neutral w-2/3">“We don’t just provide services, <span className="font-semibold">we become partners in your success</span>”</p>

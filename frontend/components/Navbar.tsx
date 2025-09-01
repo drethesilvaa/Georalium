@@ -25,7 +25,7 @@ export default function Navbar() {
                         <li><a href="#solutions" onClick={onAnchorClick} className="text-lg">Solutions</a></li>
                     </ul>
                 </div>
-                <a href="#hero" onClick={onAnchorClick} className="text-xl"><img src="/Logo.png" className="h-16 object-contain" alt="Logo" /></a>
+                <a href="#hero" onClick={onAnchorClick} className="text-xl"><img src="/Logo.png" className="h-10 object-contain" alt="Logo" /></a>
             </div>
 
             <div className="navbar-center hidden lg:flex">
