@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Slider from "@/components/Slider";
 import { useLocoAnchors } from "@/hooks/useLocoAnchors";
@@ -89,12 +89,13 @@ export const Solutions = () => {
 
   return (
     <div
+      id="solutions"
       data-scroll-section
       className="min-h-screen h-full py-28 bg-[url('/SolutionsBg.png')] bg-cover bg-center relative "
     >
       <div className="bg-black/75 absolute h-full w-full top-0"></div>
       <div className="grid h-full items-center">
-        <div id="solutions" className="text-white z-10">
+        <div className="text-white z-10">
           <h4 className="custom-container heading-6xl uppercase text-center font-extrabold">
             Solutions For Everyone
           </h4>

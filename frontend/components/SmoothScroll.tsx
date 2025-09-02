@@ -28,8 +28,8 @@ export default function SmoothScroll({ children }: Props) {
       scroll = new LocomotiveScroll({
         el: containerRef.current!,
         smooth: true,
-        multiplier: 1.1,
-        lerp: 0.08,
+        multiplier: 1,
+        lerp: 0.5,
         tablet: { smooth: true },
       });
 
