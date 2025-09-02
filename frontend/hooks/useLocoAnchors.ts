@@ -15,7 +15,7 @@ export function useLocoAnchors() {
       const el = document.querySelector(hash) as HTMLElement | null;
       if (el) {
         // tweak offset to account for your fixed navbar height
-        loco.scrollTo!(el, { offset: 0, duration: 800 });
+        loco.scrollTo!(el, { offset: 0, duration: 2500 });
       }
     };
 
@@ -44,7 +44,7 @@ export function useLocoAnchors() {
 
     if (loco) {
       e.preventDefault?.(); // only defined on <a>, but safe to call
-      loco.scrollTo!(target, { offset: 0, duration: 800 });
+      loco.scrollTo!(target, { offset: 0, duration: 3000 });
 
       // keep URL hash in sync only for anchors
       if (e.currentTarget.tagName.toLowerCase() === "a") {

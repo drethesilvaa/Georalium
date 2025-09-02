@@ -42,11 +42,11 @@ export function MapWithPins({
         <div
             className={`flex items-center justify-center shrink-0 custom-container ${className}`}
         >
-            <div className="grid lg:flex gap-6 items-center justify-items-center w-full">
+            <div className="grid lg:flex gap-6 items-center justify-center justify-items-center w-full">
                 {/* MAP */}
                 <div
                     className="
-            relative w-full max-w-[640px]
+            relative w-full max-w-[460px]
             aspect-[320/350]  /* keeps the original ratio, scales responsively */
             rounded-md overflow-hidden
           "

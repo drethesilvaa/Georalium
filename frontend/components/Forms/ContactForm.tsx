@@ -146,7 +146,7 @@ export const ContactForm: React.FC<Props> = ({
                         )}
                     </div>
 
-                    <button className="btn btn-md btn-primary" type="submit" disabled={isSubmitting} style={{ marginTop: 8 }}>
+                    <button className="btn btn-md btn-primary disabled:opacity-50" type="submit" disabled={isSubmitting || true} style={{ marginTop: 8 }}>
                         {isSubmitting ? "Sending…" : "Send message"}
                     </button>
 

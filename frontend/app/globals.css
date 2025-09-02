@@ -47,12 +47,9 @@ body {
 }
 
 .navbar {
-  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2), 0 0 20px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(3px);
   filter: url("/glassDistorion.svg");
   background: rgba(255, 255, 255, 0.9);
-  box-shadow: inset 2px 2px 1px 0 rgba(255, 255, 255, 0.5),
-    inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
 .btn {
@@ -165,6 +162,14 @@ body {
 }
 
 /* Slider */
+
+.swiper {
+  cursor: grab;
+}
+
+.swiper:active {
+  cursor: grabbing;
+}
 
 .swiper-button-prev,
 .swiper-button-next {
@@ -309,3 +314,5 @@ body {
     background-position: 0% 100%, 100% 100%, 200% 100%;
   }
 }
+
+/* bgs */
