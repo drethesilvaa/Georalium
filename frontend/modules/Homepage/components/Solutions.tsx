@@ -13,6 +13,7 @@ import {
   TruckIcon,
 } from "@phosphor-icons/react/dist/ssr";
 import { Fragment } from "react";
+import { motion } from "framer-motion";
 
 export const Solutions = () => {
   const { onAnchorClick } = useLocoAnchors();
@@ -56,7 +57,7 @@ export const Solutions = () => {
       subtitle: "Turning Opportunities Into Sustainable Investments",
       title: "Supporting Investors with Clarity and Confidence",
       img: "/InvestorsBg.png",
-      imgAlt: "People shaking hand in a office by aftabmirza",
+      imgAlt: "People shaking hand in an office by aftabmirza",
       ctaButton: "Request investor pack",
       items: [
         {
@@ -96,9 +97,15 @@ export const Solutions = () => {
       <div className="bg-black/75 absolute h-full w-full top-0"></div>
       <div className="grid h-full items-center">
         <div className="text-white z-10">
-          <h4 className="custom-container heading-6xl uppercase text-center font-extrabold">
+          <motion.h4
+            className="custom-container heading-6xl uppercase text-center font-extrabold"
+            viewport={{ once: true }}
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+          >
             Solutions For Everyone
-          </h4>
+          </motion.h4>
           <div className="grid mt-10 px-6">
             <Slider
               center
@@ -122,40 +129,84 @@ export const Solutions = () => {
                 <Fragment key={idx}>
                   <div className="p-6 solution--card">
                     <div>
-                      <h3 className="heading-3xl ">{item.subtitle}</h3>
-                      <h4 className="heading-5xl font-semibold">
+                      <motion.h3
+                        className="heading-3xl"
+                        viewport={{ once: true }}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                          duration: 0.8,
+                          ease: "easeOut",
+                          delay: 0.2,
+                        }}
+                      >
+                        {item.subtitle}
+                      </motion.h3>
+                      <motion.h4
+                        className="heading-5xl font-semibold"
+                        viewport={{ once: true }}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{
+                          duration: 0.8,
+                          ease: "easeOut",
+                          delay: 0.3,
+                        }}
+                      >
                         {item.title}
-                      </h4>
+                      </motion.h4>
                     </div>
                     <div className="grid md:grid-cols-2 gap-6 mt-6">
                       <div>
-                        <img
+                        <motion.img
+                          viewport={{ once: true }}
                           src={item.img}
                           alt={item.imgAlt}
                           className="rounded-lg shadow-sm max-h-[420] object-cover w-full"
+                          initial={{ opacity: 0, scale: 0.95 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 1, ease: "easeOut" }}
                         />
                       </div>
                       <div className="grid grid-cols-1 gap-6 items-center content-center">
                         {item.items?.map((content, k) => (
-                          <div
+                          <motion.div
                             key={k}
                             className="flex gap-6 items-center p-2 bg-white shadow-xs rounded-lg h-full text-[#00091A]"
+                            initial={{ opacity: 0, x: -20 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                              duration: 0.8,
+                              ease: "easeOut",
+                              delay: 0.4 + 0.1 * k,
+                            }}
                           >
-                            <div>{content.icon}</div>
-                            <p className="body-2xl">{content.title}</p>
-                          </div>
+                            <motion.div>{content.icon}</motion.div>
+                            <motion.p className="body-2xl">
+                              {content.title}
+                            </motion.p>
+                          </motion.div>
                         ))}
                       </div>
                     </div>
                   </div>
                   <div className="flex items-center justify-center mt-10">
-                    <button
+                    <motion.button
                       data-target="#contacts"
                       onClick={onAnchorClick}
                       className="btn btn-glass btn-glass--dark md:btn-xl uppercase font-normal text-white"
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{
+                        duration: 0.8,
+                        ease: "easeOut",
+                        delay: 0.5,
+                      }}
                     >
                       {item.ctaButton}
-                    </button>
+                    </motion.button>
                   </div>
                 </Fragment>
               ))}
