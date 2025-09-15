@@ -6,44 +6,72 @@ import { motion } from "framer-motion";
 
 const teamimagesData = [
   {
-    image: "https://placehold.co/400",
-    alt: "placeholder",
+    image: "/teamImages/pexels-belle-co-99483-1000445.jpg",
+    alt: "Silhouette Photography of Group of People Jumping during Golden Time",
   },
   {
-    image: "https://placehold.co/400",
-    alt: "placeholder",
+    image: "/teamImages/pexels-divinetechygirl-1181438.jpg",
+    alt: "Group of Women Standing Near Desk",
   },
   {
-    image: "https://placehold.co/400",
-    alt: "placeholder",
+    image: "/teamImages/pexels-divinetechygirl-1181622.jpg",
+    alt: "Women Colleagues gathered inside Conference Room",
   },
   {
-    image: "https://placehold.co/400",
-    alt: "placeholder",
+    image: "/teamImages/pexels-fauxels-3184291.jpg",
+    alt: "Colleagues Shaking each other's Hands",
   },
   {
-    image: "https://placehold.co/400",
-    alt: "placeholder",
+    image: "/teamImages/pexels-fauxels-3184325.jpg",
+    alt: "Photo Of People Leaning On Wooden Table",
   },
   {
-    image: "https://placehold.co/400",
-    alt: "placeholder",
+    image: "/teamImages/pexels-fauxels-3184339.jpg",
+    alt: "Man Wearing Brown Suit Jacket",
   },
   {
-    image: "https://placehold.co/400",
-    alt: "placeholder",
+    image: "/teamImages/pexels-hillaryfox-1595385.jpg",
+    alt: "Group of People Watching on Laptop",
   },
   {
-    image: "https://placehold.co/400",
-    alt: "placeholder",
+    image: "/teamImages/pexels-divinetechygirl-1181622.jpg",
+    alt: "Women Colleagues gathered inside Conference Room",
   },
   {
-    image: "https://placehold.co/400",
-    alt: "placeholder",
+    image: "/teamImages/pexels-fauxels-3184291.jpg",
+    alt: "Colleagues Shaking each other's Hands",
   },
   {
-    image: "https://placehold.co/400",
-    alt: "placeholder",
+    image: "/teamImages/pexels-fauxels-3184325.jpg",
+    alt: "Photo Of People Leaning On Wooden Table",
+  },
+  {
+    image: "/teamImages/pexels-fauxels-3184339.jpg",
+    alt: "Man Wearing Brown Suit Jacket",
+  },
+  {
+    image: "/teamImages/pexels-hillaryfox-1595385.jpg",
+    alt: "Group of People Watching on Laptop",
+  },
+  {
+    image: "/teamImages/pexels-divinetechygirl-1181622.jpg",
+    alt: "Women Colleagues gathered inside Conference Room",
+  },
+  {
+    image: "/teamImages/pexels-fauxels-3184291.jpg",
+    alt: "Colleagues Shaking each other's Hands",
+  },
+  {
+    image: "/teamImages/pexels-fauxels-3184325.jpg",
+    alt: "Photo Of People Leaning On Wooden Table",
+  },
+  {
+    image: "/teamImages/pexels-fauxels-3184339.jpg",
+    alt: "Man Wearing Brown Suit Jacket",
+  },
+  {
+    image: "/teamImages/pexels-hillaryfox-1595385.jpg",
+    alt: "Group of People Watching on Laptop",
   },
 ];
 
@@ -243,17 +271,20 @@ export const AboutUs = () => {
         </div>
         <motion.div className="my-10">
           <Slider
-            pagination={false}
             navigation
-            slidesPerView={6}
+            loop
+            pagination={false}
+            breakpoints={{
+              320: { slidesPerView: 3 },
+              480: { slidesPerView: 3 },
+              1024: { slidesPerView: 6 },
+              1280: { slidesPerView: 6 },
+            }}
             items={teamimagesData?.map((image) => (
-              <motion.img
+              <img
                 src={image.image}
                 alt={image.alt}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="aspect-square object-cover w-full h-full"
               />
             ))}
           />

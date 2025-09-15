@@ -163,14 +163,6 @@ body {
 
 /* Slider */
 
-.swiper {
-  cursor: grab;
-}
-
-.swiper:active {
-  cursor: grabbing;
-}
-
 .swiper-button-prev,
 .swiper-button-next {
   color: white !important;
