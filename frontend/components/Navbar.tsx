@@ -41,7 +41,7 @@ export default function Navbar() {
           </div>
           <motion.ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-52 p-2 shadow"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-50 mt-3 w-72 p-2 shadow"
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.3, ease: "easeOut" }}
@@ -52,7 +52,7 @@ export default function Navbar() {
               transition={{ delay: 0.1, duration: 0.3 }}
             >
               <a href="#who-we-are" onClick={onAnchorClick} className="text-lg">
-                Who We Are
+                <UserCircleIcon /> Who We Are
               </a>
             </motion.li>
             <motion.li
@@ -61,7 +61,7 @@ export default function Navbar() {
               transition={{ delay: 0.2, duration: 0.3 }}
             >
               <a href="#services" onClick={onAnchorClick} className="text-lg">
-                Services
+                <BriefcaseIcon /> What We Do
               </a>
             </motion.li>
             <motion.li
@@ -70,7 +70,7 @@ export default function Navbar() {
               transition={{ delay: 0.3, duration: 0.3 }}
             >
               <a href="#solutions" onClick={onAnchorClick} className="text-lg">
-                Solutions
+                <HandshakeIcon /> Tailored Solutions
               </a>
             </motion.li>
           </motion.ul>
