@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 
 const teamimagesData = [
   {
-    image: "/teamImages/pexels-belle-co-99483-1000445.jpg",
-    alt: "Silhouette Photography of Group of People Jumping during Golden Time",
+    image: "/teamImages/pexels-pavel-danilyuk-8111815.jpg",
+    alt: "Figurine of Justice on Table in Office",
   },
   {
     image: "/teamImages/pexels-divinetechygirl-1181438.jpg",
@@ -18,60 +18,60 @@ const teamimagesData = [
     alt: "Women Colleagues gathered inside Conference Room",
   },
   {
-    image: "/teamImages/pexels-fauxels-3184291.jpg",
-    alt: "Colleagues Shaking each other's Hands",
+    image: "/teamImages/adult-1867771_1920.jpg",
+    alt: "Adult, Construction, Hard hat image",
   },
   {
-    image: "/teamImages/pexels-fauxels-3184325.jpg",
-    alt: "Photo Of People Leaning On Wooden Table",
+    image: "/teamImages/pexels-pavel-danilyuk-8111876.jpg",
+    alt: "A Woman in Black Blazer Holding a Clipboard",
   },
   {
     image: "/teamImages/pexels-fauxels-3184339.jpg",
     alt: "Man Wearing Brown Suit Jacket",
   },
   {
-    image: "/teamImages/pexels-hillaryfox-1595385.jpg",
-    alt: "Group of People Watching on Laptop",
+    image: "/teamImages/pexels-illustrate-digital-ug-924569584-19982408.jpg",
+    alt: "Worker at Construction Site",
   },
   {
     image: "/teamImages/pexels-divinetechygirl-1181622.jpg",
     alt: "Women Colleagues gathered inside Conference Room",
   },
   {
-    image: "/teamImages/pexels-fauxels-3184291.jpg",
-    alt: "Colleagues Shaking each other's Hands",
+    image: "/teamImages/adult-1867771_1920.jpg",
+    alt: "Adult, Construction, Hard hat image",
   },
   {
-    image: "/teamImages/pexels-fauxels-3184325.jpg",
-    alt: "Photo Of People Leaning On Wooden Table",
+    image: "/teamImages/pexels-pavel-danilyuk-8111876.jpg",
+    alt: "A Woman in Black Blazer Holding a Clipboard",
   },
   {
     image: "/teamImages/pexels-fauxels-3184339.jpg",
     alt: "Man Wearing Brown Suit Jacket",
   },
   {
-    image: "/teamImages/pexels-hillaryfox-1595385.jpg",
-    alt: "Group of People Watching on Laptop",
+    image: "/teamImages/pexels-illustrate-digital-ug-924569584-19982408.jpg",
+    alt: "Worker at Construction Site",
   },
   {
     image: "/teamImages/pexels-divinetechygirl-1181622.jpg",
     alt: "Women Colleagues gathered inside Conference Room",
   },
   {
-    image: "/teamImages/pexels-fauxels-3184291.jpg",
-    alt: "Colleagues Shaking each other's Hands",
+    image: "/teamImages/adult-1867771_1920.jpg",
+    alt: "Adult, Construction, Hard hat image",
   },
   {
-    image: "/teamImages/pexels-fauxels-3184325.jpg",
-    alt: "Photo Of People Leaning On Wooden Table",
+    image: "/teamImages/pexels-pavel-danilyuk-8111876.jpg",
+    alt: "A Woman in Black Blazer Holding a Clipboard",
   },
   {
     image: "/teamImages/pexels-fauxels-3184339.jpg",
     alt: "Man Wearing Brown Suit Jacket",
   },
   {
-    image: "/teamImages/pexels-hillaryfox-1595385.jpg",
-    alt: "Group of People Watching on Laptop",
+    image: "/teamImages/pexels-illustrate-digital-ug-924569584-19982408.jpg",
+    alt: "Worker at Construction Site",
   },
 ];
 
@@ -95,7 +95,7 @@ export const AboutUs = () => {
               initial={{ opacity: 0, y: -20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.02 }}
             >
               A Trusted Partner in Angola’s Mining & Energy
             </motion.h3>
@@ -106,7 +106,7 @@ export const AboutUs = () => {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.04 }}
               >
                 <motion.span className="text-primary">
                   Georalium Mining & Energy
@@ -120,21 +120,50 @@ export const AboutUs = () => {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
+                  transition={{ duration: 0.5, delay: 0.06 }}
                 >
-                  Local content & legal support for investments
+                  Local content & legal support
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.7 }}
+                  transition={{ duration: 0.5, delay: 0.08 }}
                 >
                   Supply-chain mapping and operational readiness
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
+                  transition={{ duration: 0.5, delay: 0.1 }}
+                >
+                  Investor Care - insouring investment from start to
+                  repatriation of capital
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.12 }}
+                >
+                  Legal and Accounting services
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.14 }}
+                >
+                  Tax solutions
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.16 }}
+                >
+                  Geological Evaluation
+                </motion.li>
+                <motion.li
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.5, delay: 0.18 }}
                 >
                   Environmental compliance and project evaluation
                 </motion.li>
@@ -154,6 +183,64 @@ export const AboutUs = () => {
             </motion.div>
           </div>
         </section>
+      </div>
+      <section data-scroll-section className="mt-32">
+        <div className="custom-container">
+          <motion.h3
+            className="heading-4xl font-semibold"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            A Multi-Disciplinary Team Dedicated to Mining Excellence
+          </motion.h3>
+          <motion.h4
+            className="heading-2xl"
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+          >
+            International specialists with decades of experience; deep knowledge
+            of mining standards.
+          </motion.h4>
+        </div>
+        <motion.div className="my-10">
+          <Slider
+            navigation
+            loop
+            pagination={false}
+            breakpoints={{
+              320: { slidesPerView: 3 },
+              480: { slidesPerView: 3 },
+              1024: { slidesPerView: 6 },
+              1280: { slidesPerView: 6 },
+            }}
+            items={teamimagesData?.map((image) => (
+              <img
+                src={image.image}
+                alt={image.alt}
+                className="aspect-square object-cover w-full h-full"
+              />
+            ))}
+          />
+        </motion.div>
+        <div className="text-right flex justify-end px-4 ">
+          <motion.p
+            className="heading-3xl italic w-full lg:w-2/4"
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+          >
+            “Behind every <strong>successful</strong> project is a team that
+            knows the <strong>ground</strong>, the <strong>market</strong>, and
+            the <strong>people”</strong>
+          </motion.p>
+        </div>
+      </section>
+      <div className="custom-container grid mt-32">
         <section data-scroll-section>
           <div>
             <motion.h3
@@ -247,62 +334,6 @@ export const AboutUs = () => {
           </motion.div>
         </section>
       </div>
-      <section data-scroll-section className="mt-32">
-        <div className="custom-container">
-          <motion.h3
-            className="heading-4xl font-semibold"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-          >
-            A Multi-Disciplinary Team Dedicated to Mining Excellence
-          </motion.h3>
-          <motion.h4
-            className="heading-2xl"
-            initial={{ opacity: 0, y: -20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-          >
-            International specialists with decades of experience; deep knowledge
-            of mining standards.
-          </motion.h4>
-        </div>
-        <motion.div className="my-10">
-          <Slider
-            navigation
-            loop
-            pagination={false}
-            breakpoints={{
-              320: { slidesPerView: 3 },
-              480: { slidesPerView: 3 },
-              1024: { slidesPerView: 6 },
-              1280: { slidesPerView: 6 },
-            }}
-            items={teamimagesData?.map((image) => (
-              <img
-                src={image.image}
-                alt={image.alt}
-                className="aspect-square object-cover w-full h-full"
-              />
-            ))}
-          />
-        </motion.div>
-        <div className="text-right flex justify-end px-4 ">
-          <motion.p
-            className="heading-3xl italic w-full lg:w-2/4"
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          >
-            “Behind every <strong>successful</strong> project is a team that
-            knows the <strong>ground</strong>, the <strong>market</strong>, and
-            the <strong>people”</strong>
-          </motion.p>
-        </div>
-      </section>
       <section data-scroll-section className="mt-32">
         <MapWithPins imageSrc="/AngolaMap.png" pins={ANGOLA_PINS} />
       </section>

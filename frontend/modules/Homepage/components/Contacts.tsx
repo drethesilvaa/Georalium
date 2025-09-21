@@ -58,18 +58,18 @@ export const Contacts = () => {
                 transition={{ duration: 0.8, ease: "easeOut", delay: 0.5 }}
               >
                 {/* Email */}
-                <div className="grid gap-2 justify-items-center text-center">
+                {/* <div className="grid gap-2 justify-items-center text-center">
                   <AtIcon size={36} color={"#022161"} />
                   <a
                     href="mailto:info@georalium.com"
                     className="text-xl font-semibold text-[#00091A] hover:underline break-words"
                   >
-                    info@georalium.com
+                    georaliuminfo@georalium.com
                   </a>
-                </div>
+                </div> */}
 
                 {/* Phone */}
-                <div className="grid gap-2 justify-items-center text-center">
+                {/* <div className="grid gap-2 justify-items-center text-center">
                   <PhoneIcon size={36} color={"#022161"} />
                   <div className="flex gap-2">
                     <a
@@ -86,18 +86,20 @@ export const Contacts = () => {
                       222 747 198
                     </a>
                   </div>
-                </div>
+                </div> */}
 
                 {/* Map */}
-                <div className="grid gap-2 justify-items-center text-center">
+                <div className="grid gap-2 justify-items-center text-center items-center">
                   <MapPinIcon size={36} color={"#022161"} />
                   <a
-                    href="https://www.google.com/maps?q=T.+Rei+Katyavala,+Luanda"
+                    href="https://www.google.com/maps?q=Urbanização Boa Vida Loja A02,Via Expresso,
+                    Belas, Angola"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-xl font-semibold text-[#00091A] hover:underline"
                   >
-                    T. Rei Katyavala, Luanda
+                    Urbanização Boa Vida, Loja A02 <br />
+                    Via Expresso, Belas, Angola
                   </a>
                 </div>
               </motion.div>

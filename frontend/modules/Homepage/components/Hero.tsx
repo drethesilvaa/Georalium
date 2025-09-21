@@ -84,10 +84,10 @@ export const Hero = () => {
           >
             <div className="card-body">
               <p className="heading-font heading-3xl text-neutral font-black">
-                00+
+                8
               </p>
               <p className="heading-xl text-neutral body-font">
-                Satisfied Partners
+                On Going Projects
               </p>
               <motion.img
                 src="/rocket.png"
@@ -112,12 +112,11 @@ export const Hero = () => {
             transition={{ duration: 1, ease: "easeOut", delay: 1 }}
           >
             <div className="card-body">
-              <p className="heading-font heading-3xl text-neutral font-black">
-                000k
+              <p className="heading-xl text-neutral font-black w-2/3">
+                Management Key Sustainable Projects in Angola
               </p>
-              <p className="heading-xl text-neutral body-font">Some Metric</p>
               <motion.img
-                src="/trophy.png"
+                src="/salve-o-mundo.png"
                 className="h-[76px] w-[76px] object-cover absolute right-[24px] bottom-[24px]"
                 alt=""
                 initial={{ rotate: 0, scale: 1, opacity: 0 }}

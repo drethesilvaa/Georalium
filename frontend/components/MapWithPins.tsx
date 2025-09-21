@@ -171,7 +171,7 @@ export function MapWithPins({
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="heading-5xl max-w-[28ch]"
           >
-            Our Presence Across <span className="text-angola-red">Angola</span>
+            Our Presence and Our Partners Across <span className="text-angola-red">Angola</span> 
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: -20 }}
@@ -180,7 +180,7 @@ export function MapWithPins({
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="body-2xl mt-2"
           >
-            Luanda • Huambo • Lubango • Saurimo
+            Luanda • Huambo • Lubango • Namibe • Saurimo
           </motion.p>
         </div>
       </div>
@@ -189,8 +189,9 @@ export function MapWithPins({
 }
 
 export const ANGOLA_PINS: Pin[] = [
-  { id: "luanda", label: "Luanda", topPct: 36, leftPct: 20 },
-  { id: "huambo", label: "Huambo", topPct: 58, leftPct: 32 },
-  { id: "lubango", label: "Lubango", topPct: 81, leftPct: 21 },
-  { id: "saurimo", label: "Saurimo", topPct: 34, leftPct: 68 },
+  { id: "luanda", label: "Luanda", topPct: 38, leftPct: 19 },
+  { id: "huambo", label: "Huambo", topPct: 58, leftPct: 35 },
+  { id: "lubango", label: "Lubango", topPct: 72, leftPct: 21 },
+  { id: "saurimo", label: "Saurimo", topPct: 40, leftPct: 70 },
+  { id: "namibe", label: "Namibe", topPct: 77, leftPct: 12 },
 ];

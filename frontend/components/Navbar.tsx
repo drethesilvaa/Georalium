@@ -1,5 +1,10 @@
 "use client";
-import { ArrowCircleRightIcon } from "@phosphor-icons/react/dist/ssr";
+import {
+  ArrowCircleRightIcon,
+  BriefcaseIcon,
+  HandshakeIcon,
+  UserCircleIcon,
+} from "@phosphor-icons/react/dist/ssr";
 import { useHideOnLocoScroll } from "@/hooks/useHideOnLocoScroll";
 import { useLocoAnchors } from "@/hooks/useLocoAnchors";
 import { motion } from "framer-motion";
@@ -95,7 +100,7 @@ export default function Navbar() {
             transition={{ delay: 0.1, duration: 0.3 }}
           >
             <a href="#who-we-are" onClick={onAnchorClick}>
-              Who We Are
+              <UserCircleIcon /> Who We Are
             </a>
           </motion.li>
           <motion.li
@@ -104,7 +109,7 @@ export default function Navbar() {
             transition={{ delay: 0.2, duration: 0.3 }}
           >
             <a href="#services" onClick={onAnchorClick}>
-              Services
+              <BriefcaseIcon /> What We Do
             </a>
           </motion.li>
           <motion.li
@@ -113,7 +118,7 @@ export default function Navbar() {
             transition={{ delay: 0.3, duration: 0.3 }}
           >
             <a href="#solutions" onClick={onAnchorClick}>
-              Solutions
+              <HandshakeIcon /> Tailored Solutions
             </a>
           </motion.li>
         </motion.ul>

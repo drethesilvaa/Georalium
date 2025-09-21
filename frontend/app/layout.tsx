@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Lato, Karla } from "next/font/google";
 import "./globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
+import { Toaster } from "react-hot-toast";
+import { Analytics } from "@vercel/analytics/next"
 
 const lato = Lato({
   subsets: ["latin"],
@@ -19,7 +21,8 @@ const karla = Karla({
 
 export const metadata: Metadata = {
   title: "Georalium",
-  description: "Georalium Mining & Energy is a local Angolan firm supporting the mining sector with specialized services for investors and operators—reducing risk and streamlining market entry.",
+  description:
+    "Georalium Mining & Energy is a local Angolan firm supporting the mining sector with specialized services for investors and operators—reducing risk and streamlining market entry.",
 };
 
 export default function RootLayout({
@@ -29,13 +32,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" data-theme="light">
-      <body
-        className={`${lato.variable} ${karla.variable} antialiased`}
-      >
-
-        <SmoothScroll>
-          {children}
-        </SmoothScroll>
+      <body className={`${lato.variable} ${karla.variable} antialiased`}>
+        <SmoothScroll>{children}</SmoothScroll>
+        <Toaster
+          toastOptions={{
+            // Define default options
+            className: "",
+            duration: 5000,
+            removeDelay: 1000,
+          }}
+          position="bottom-center"
+          reverseOrder={false}
+        />
+        <Analytics />
       </body>
     </html>
   );

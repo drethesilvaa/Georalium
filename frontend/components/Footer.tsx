@@ -1,12 +1,13 @@
+import { ArrowUpIcon } from "@phosphor-icons/react/dist/ssr";
+
 const Footer = () => {
+  return (
+    <footer data-scroll-section className="bg-blue">
+      <div className="custom-container text-right text-base font-medium py-4">
+        Georalium @Copyright 2025
+      </div>
+    </footer>
+  );
+};
 
-    return (
-        <footer data-scroll-section className="bg-blue">
-            <div className="custom-container text-right text-base font-medium py-4" >
-                Georalium @Copyright 2025
-            </div>
-        </footer>
-    )
-}
-
-export default Footer
+export default Footer;
