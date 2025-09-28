@@ -4,8 +4,8 @@ import "../globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import { Toaster } from "react-hot-toast";
 import { Analytics } from "@vercel/analytics/next";
-import TranslationProvider from "@/providers/TranslationProvider";
 import { getDictionary } from "./dictionaries";
+import DictionaryLoader from "./DictionaryLoader";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -21,31 +21,39 @@ const karla = Karla({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Georalium",
-  description:
-    "Georalium Mining & Energy is a local Angolan firm supporting the mining sector with specialized services for investors and operators—reducing risk and streamlining market entry.",
-};
+type Params = Promise<{ lang: string }>;
 
-export async function generateStaticParams() {
-  return [{ lang: "en" }, { lang: "pt" }];
+export async function generateMetadata({
+  params,
+}: {
+  params: Params;
+}): Promise<Metadata> {
+  const { lang } = await params;
+  return {
+    title: "Georalium",
+    description:
+      "Georalium Mining & Energy is a local Angolan firm supporting the mining sector with specialized services for investors and operators—reducing risk and streamlining market entry.",
+    alternates: {
+      canonical: `/${lang}`,
+    },
+  };
 }
 
 export default async function RootLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-  params: Promise<{ lang: "en" | "pt" }>;
-}>) {
-  const dict = await getDictionary((await params).lang);
+  params: Params;
+}) {
+  const { lang } = await params;
 
   return (
-    <html lang={(await params).lang} data-theme="light">
+    <html lang={lang} data-theme="light">
       <body className={`${lato.variable} ${karla.variable} antialiased`}>
-        <TranslationProvider dict={dict} lang={(await params).lang}>
+        <DictionaryLoader lang={lang}>
           <SmoothScroll>{children}</SmoothScroll>
-        </TranslationProvider>
+        </DictionaryLoader>
         <Toaster
           toastOptions={{
             // Define default options
