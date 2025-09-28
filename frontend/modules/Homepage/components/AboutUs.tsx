@@ -2,6 +2,7 @@
 
 import { ANGOLA_PINS, MapWithPins } from "@/components/MapWithPins";
 import Slider from "@/components/Slider";
+import { useTranslation } from "@/providers/TranslationProvider";
 import { motion } from "framer-motion";
 
 const teamimagesData = [
@@ -76,6 +77,8 @@ const teamimagesData = [
 ];
 
 export const AboutUs = () => {
+  const { dict, lang } = useTranslation();
+
   return (
     <div className="py-28">
       <div className="custom-container grid gap-32">
@@ -88,7 +91,7 @@ export const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Who We Are
+              {dict.aboutus["who-we-are"].title}
             </motion.h2>
             <motion.h3
               className="heading-4xl"
@@ -97,7 +100,7 @@ export const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.02 }}
             >
-              A Trusted Partner in Angola’s Mining & Energy
+              {dict.aboutus["who-we-are"].subtitle}
             </motion.h3>
           </div>
           <div className="grid xl:grid-cols-2 gap-6 mt-10">
@@ -111,9 +114,7 @@ export const AboutUs = () => {
                 <motion.span className="text-primary">
                   Georalium Mining & Energy
                 </motion.span>{" "}
-                is a local Angolan firm supporting the mining sector with
-                specialized services for investors and operators—reducing risk
-                and streamlining market entry.
+                {dict.aboutus["who-we-are"].description}
               </motion.p>
               <ul className="list-disc pl-10">
                 <motion.li
@@ -122,50 +123,53 @@ export const AboutUs = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.06 }}
                 >
-                  Local content & legal support
+                  {dict.aboutus["who-we-are"]["bullet-points"]["local-legal"]}
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.08 }}
                 >
-                  Supply-chain mapping and operational readiness
+                  {dict.aboutus["who-we-are"]["bullet-points"]["supply-chain"]}
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                  Investor Care - insouring investment from start to
-                  repatriation of capital
+                  {dict.aboutus["who-we-are"]["bullet-points"]["investor-care"]}
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.12 }}
                 >
-                  Legal and Accounting services
+                  {
+                    dict.aboutus["who-we-are"]["bullet-points"][
+                      "legal-accounting"
+                    ]
+                  }
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.14 }}
                 >
-                  Tax solutions
+                  {dict.aboutus["who-we-are"]["bullet-points"]["tax"]}
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.16 }}
                 >
-                  Geological Evaluation
+                  {dict.aboutus["who-we-are"]["bullet-points"]["geological"]}
                 </motion.li>
                 <motion.li
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.5, delay: 0.18 }}
                 >
-                  Environmental compliance and project evaluation
+                  {dict.aboutus["who-we-are"]["bullet-points"]["environmental"]}
                 </motion.li>
               </ul>
             </div>
@@ -193,7 +197,7 @@ export const AboutUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            A Multi-Disciplinary Team Dedicated to Mining Excellence
+            {dict.aboutus["who-we-are"]["team"].title}
           </motion.h3>
           <motion.h4
             className="heading-2xl"
@@ -202,8 +206,7 @@ export const AboutUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
           >
-            International specialists with decades of experience; deep knowledge
-            of mining standards.
+            {dict.aboutus["who-we-are"]["team"].subtitle}
           </motion.h4>
         </div>
         <motion.div className="my-10">
@@ -234,9 +237,19 @@ export const AboutUs = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           >
-            “Behind every <strong>successful</strong> project is a team that
-            knows the <strong>ground</strong>, the <strong>market</strong>, and
-            the <strong>people”</strong>
+            {lang === "en" ? (
+              <>
+                “Behind every <strong>successful</strong> project is a team that
+                knows the <strong>ground</strong>, the <strong>market</strong>,
+                and the <strong>people”</strong>
+              </>
+            ) : (
+              <>
+                “Por trás de cada projeto <strong>bem-sucedido</strong> está uma
+                equipa que conhece profundamente o <strong>terreno</strong>, o
+                <strong>mercado</strong> e as <strong>pessoas”</strong>
+              </>
+            )}
           </motion.p>
         </div>
       </section>
@@ -250,7 +263,7 @@ export const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Bringing Efficiency Through Innovative IT Services
+              {dict.aboutus["who-we-are"]["it"].title}
             </motion.h3>
             <motion.h4
               className="heading-2xl"
@@ -259,7 +272,7 @@ export const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              Technology that supports operations at every stage
+              {dict.aboutus["who-we-are"]["it"].subtitle}
             </motion.h4>
           </div>
           <motion.div className="grid gap-6 mt-10">
@@ -289,10 +302,7 @@ export const AboutUs = () => {
                     />
                   </figure>
                   <div className="card-body leading-none absolute bottom-0 bg-gradient--white w-full body-2xl text-center">
-                    <p>
-                      Viability studies, tailor-made software,
-                      web/intranet/extranet
-                    </p>
+                    <p>{dict.aboutus["who-we-are"]["it"]["card1-title"]}</p>
                   </div>
                 </div>,
                 <div className="card p-2 overflow-hidden shadow-sm">
@@ -308,9 +318,7 @@ export const AboutUs = () => {
                     />
                   </figure>
                   <div className="card-body leading-none absolute bottom-0 bg-gradient--white w-full body-2xl text-center">
-                    <p>
-                      System administration, security, support & maintenance
-                    </p>
+                    <p>{dict.aboutus["who-we-are"]["it"]["card2-title"]}</p>
                   </div>
                 </div>,
                 <div className="card p-2 overflow-hidden shadow-sm">
@@ -326,7 +334,7 @@ export const AboutUs = () => {
                     />
                   </figure>
                   <div className="card-body leading-none absolute bottom-0 bg-gradient--white w-full body-2xl text-center min-h-[120px] flex items-center">
-                    <p>Training (IT)</p>
+                    <p>{dict.aboutus["who-we-are"]["it"]["card3-title"]}</p>
                   </div>
                 </div>,
               ]}

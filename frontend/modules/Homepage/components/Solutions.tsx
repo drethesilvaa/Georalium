@@ -14,75 +14,76 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { Fragment } from "react";
 import { motion } from "framer-motion";
+import { useTranslation } from "@/providers/TranslationProvider";
 
 export const Solutions = () => {
+  const { dict, lang } = useTranslation();
   const { onAnchorClick } = useLocoAnchors();
 
   const solutionsData = [
     {
-      subtitle: "Operational Support That Reduces Risk",
-      title: "Empowering Operators for Efficient Operations",
+      subtitle: dict.solutions.operator.subtitle,
+      title: dict.solutions.operator.title,
       img: "/OperatorBg.png",
-      imgAlt: "Operator in a site by aftabmirza",
-      ctaButton: "Schedule an operations review",
+      imgAlt: dict.solutions.operator.imgAlt,
+      ctaButton: dict.solutions.operator.ctaButton,
       items: [
         {
           icon: (
             <ChartBarIcon className="w-[45px] h-[45px] md:w-[60px] md:h-[60px]" />
           ),
-          title: "Project evaluation & economic models for monitoring",
+          title: dict.solutions.operator["item1-title"],
         },
         {
           icon: (
             <TruckIcon className="w-[45px] h-[45px] md:w-[60px] md:h-[60px]" />
           ),
-          title: "Logistics, administrative & operational support",
+          title: dict.solutions.operator["item2-title"],
         },
         {
           icon: (
             <GlobeHemisphereEastIcon className="w-[45px] h-[45px] md:w-[60px] md:h-[60px]" />
           ),
-          title: "Environmental compliance",
+          title: dict.solutions.operator["item3-title"],
         },
         {
           icon: (
             <HandshakeIcon className="w-[45px] h-[45px] md:w-[60px] md:h-[60px]" />
           ),
-          title:
-            "Outsourcing (customs brokerage, IT, accounting, local contracting)",
+          title: dict.solutions.operator["item4-title"],
         },
       ],
     },
     {
-      subtitle: "Turning Opportunities Into Sustainable Investments",
-      title: "Supporting Investors with Clarity and Confidence",
+      subtitle: dict.solutions.investor.subtitle,
+      title: dict.solutions.investor.title,
       img: "/InvestorsBg.png",
-      imgAlt: "People shaking hand in an office by aftabmirza",
-      ctaButton: "Request investor pack",
+      imgAlt: dict.solutions.investor.imgAlt,
+      ctaButton: dict.solutions.investor.ctaButton,
       items: [
         {
           icon: (
             <FileSearchIcon className="w-[45px] h-[45px] md:w-[60px] md:h-[60px]" />
           ),
-          title: "Investment portfolio sourcing / tailored prospecting",
+          title: dict.solutions.investor["item1-title"],
         },
         {
           icon: (
             <ChartLineUpIcon className="w-[45px] h-[45px] md:w-[60px] md:h-[60px]" />
           ),
-          title: "Project evaluation & risk screening",
+          title: dict.solutions.investor["item2-title"],
         },
         {
           icon: (
             <FileTextIcon className="w-[45px] h-[45px] md:w-[60px] md:h-[60px]" />
           ),
-          title: "Licensing, local content & legal processes",
+          title: dict.solutions.investor["item3-title"],
         },
         {
           icon: (
             <MegaphoneSimpleIcon className="w-[45px] h-[45px] md:w-[60px] md:h-[60px]" />
           ),
-          title: "Go-to-market and marketing support",
+          title: dict.solutions.investor["item4-title"],
         },
       ],
     },
@@ -104,7 +105,7 @@ export const Solutions = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut" }}
           >
-            Solutions For Everyone
+            {dict.solutions.title}
           </motion.h4>
           <div className="grid mt-10 px-6">
             <Slider

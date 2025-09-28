@@ -1,0 +1,112 @@
+{
+  "navbar": {
+    "who-we-are": "Quem somos",
+    "what-we-do": "O que fazemos",
+    "solutions": "Soluções personalizadas",
+    "get-in-touch": "Entre em contacto"
+  },
+  "hero": {
+    "title1": "Impulsionando o futuro",
+    "title2": "do minério em Angola",
+    "subtitle": "Desde a prospeção até às operações, oferecemos a clareza, a conformidade e o apoio local de que necessita para ter sucesso em Angola.",
+    "cta-button": "SABER MAIS",
+    "card1": {
+      "quote1": "Não nos limitamos a prestar serviços,",
+      "quote2": "tornamo-nos parceiros no seu sucesso"
+    },
+    "card2": {
+      "title": "Projetos em andamento"
+    },
+    "card3": {
+      "title": "Gestão de projetos sustentáveis importantes em Angola"
+    }
+  },
+  "aboutus": {
+    "who-we-are": {
+      "title": "Quem somos",
+      "subtitle": "Um parceiro de confiança na indústria mineira e energética de Angola",
+      "description": "é uma empresa angolana local que apoia o setor mineiro com serviços especializados para investidores e operadores, reduzindo riscos e simplificando a entrada no mercado.",
+      "bullet-points": {
+        "local-legal": "Conteúdo local e apoio jurídico",
+        "supply-chain": "Mapeamento da cadeia de abastecimento e prontidão operacional",
+        "investor-care": "Investor Care - internalização do investimento desde o início até à repatriação do capital",
+        "legal-accounting": "Serviços jurídicos e contabilísticos",
+        "tax": "Soluções fiscais",
+        "geological": "Avaliação geológica",
+        "environmental": "Conformidade ambiental e avaliação de projetos"
+      },
+      "team": {
+        "title": "Uma equipa multidisciplinar dedicada à excelência na mineração",
+        "subtitle": "Especialistas internacionais com décadas de experiência; profundo conhecimento das normas de mineração."
+      },
+      "it": {
+        "title": "Proporcionar eficiência através de serviços de TI inovadores",
+        "subtitle": "Tecnologia que apoia as operações em todas as etapas",
+        "card1-title": "Estudos de viabilidade, software personalizado, web/intranet/extranet",
+        "card2-title": "Administração, segurança, suporte e manutenção do sistema",
+        "card3-title": "Formação (TI)"
+      }
+    }
+  },
+  "map": {
+    "title": "A nossa presença e os nossos parceiros em"
+  },
+  "services": {
+    "title": "Da prospecção à produção",
+    "subtitle": "Serviços que impulsionam o crescimento",
+    "service1": "Prospecção e Avaliação de Investimentos",
+    "service2": "Processo de licenciamento e contratual",
+    "service3": "Conformidade ambiental",
+    "service4": "Logística e apoio administrativo",
+    "service5": "Investigação de mercado e marketing",
+    "service6": "Outsourcing especializado e assessoria jurídica",
+    "service7": "Formação (Mineração e Energia)"
+  },
+  "solutions": {
+    "title": "Soluções para todos",
+    "operator": {
+      "subtitle": "Apoio operacional que reduz o risco",
+      "title": "Capacitar os operadores para operações eficientes",
+      "imgAlt": "Operador num site por aftabmirza",
+      "ctaButton": "Agendar uma revisão das operações",
+      "item1-title": "Avaliação de projeto e modelos económicos para monitorização",
+      "item2-title": "Apoio logístico, administrativo e operacional",
+      "item3-title": "Conformidade ambiental",
+      "item4-title": "Outsourcing (despacho aduaneiro, TI, contabilidade, contratação local)"
+    },
+    "investor": {
+      "subtitle": "Transformando oportunidades em investimentos sustentáveis",
+      "title": "Apoiando investidores com clareza e confiança",
+      "imgAlt": "Pessoas a apertar as mãos num escritório por aftabmirza",
+      "ctaButton": "Solicitar pacote para investidores",
+      "item1-title": "Sourcing de carteiras de investimento / prospeção personalizada",
+      "item2-title": "Avaliação de projetos e análise de riscos",
+      "item3-title": "Licenciamento, conteúdo local e processos legais",
+      "item4-title": "Suporte à comercialização e marketing"
+    }
+  },
+  "contacts": {
+    "title": "Contacte-nos",
+    "subtitle": "Vamos falar sobre o seu próximo projeto",
+    "recaptcha-error": "Por favor, confirme que não é um robô.",
+    "email-success": "✅ A sua mensagem foi enviada! Alguém da nossa equipa entrará em contacto consigo em breve.",
+    "email-error": "❌ Falha ao enviar a sua mensagem. Por favor, tente novamente.",
+    "general-error": "⚠️ Ocorreu um problema. Por favor, tente novamente mais tarde.",
+    "name": "Nome",
+    "company": "Empresa",
+    "phone": "Telefone",
+    "message": "Mensagem",
+    "textarea-placeholder": "Como podemos ajudar?",
+    "sending": "A enviar...",
+    "send-message": "Enviar Mensagem",
+    "required-fields": "campos obrigatórios"
+  },
+  "form-validations": {
+    "too-short": "Muito curto",
+    "too-long": "Demasiado longo",
+    "required": "Obrigatório",
+    "invalid-email": "E-mail inválido",
+    "invalid-phone": "Número de telefone inválido",
+    "more-detail": "Por favor, forneça mais detalhes."
+  }
+}

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Lato, Karla } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import SmoothScroll from "@/components/SmoothScroll";
 import { Toaster } from "react-hot-toast";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import TranslationProvider from "@/providers/TranslationProvider";
+import { getDictionary } from "./dictionaries";
 
 const lato = Lato({
   subsets: ["latin"],
@@ -25,15 +27,25 @@ export const metadata: Metadata = {
     "Georalium Mining & Energy is a local Angolan firm supporting the mining sector with specialized services for investors and operators—reducing risk and streamlining market entry.",
 };
 
-export default function RootLayout({
+export async function generateStaticParams() {
+  return [{ lang: "en" }, { lang: "pt" }];
+}
+
+export default async function RootLayout({
   children,
+  params,
 }: Readonly<{
   children: React.ReactNode;
+  params: Promise<{ lang: "en" | "pt" }>;
 }>) {
+  const dict = await getDictionary((await params).lang);
+
   return (
-    <html lang="en" data-theme="light">
+    <html lang={(await params).lang} data-theme="light">
       <body className={`${lato.variable} ${karla.variable} antialiased`}>
-        <SmoothScroll>{children}</SmoothScroll>
+        <TranslationProvider dict={dict} lang={(await params).lang}>
+          <SmoothScroll>{children}</SmoothScroll>
+        </TranslationProvider>
         <Toaster
           toastOptions={{
             // Define default options

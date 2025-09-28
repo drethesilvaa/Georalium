@@ -5,6 +5,7 @@ import { Formik, Form, Field, ErrorMessage, FormikHelpers } from "formik";
 import * as Yup from "yup";
 import ReCAPTCHA from "react-google-recaptcha";
 import toast from "react-hot-toast";
+import { useTranslation } from "@/providers/TranslationProvider";
 
 type FormValues = {
   name: string;
@@ -21,30 +22,40 @@ type Props = {
   initialValues?: Partial<FormValues>;
 };
 
-const ValidationSchema = Yup.object({
-  name: Yup.string().trim().min(2, "Too short").required("Required"),
-  company: Yup.string().trim().max(128, "Too long").optional(),
-  email: Yup.string().email("Invalid email").required("Required"),
-  phone: Yup.string()
-    .trim()
-    .matches(
-      // very lenient intl pattern; adjust to your needs
-      /^\+?[0-9\s().-]{7,}$/,
-      "Invalid phone number"
-    )
-    .required("Required"),
-  message: Yup.string()
-    .trim()
-    .min(10, "Please provide a bit more detail")
-    .required("Required"),
-});
-
 export const ContactForm: React.FC<Props> = ({
   recaptchaSiteKey,
   initialValues,
 }) => {
+  const { dict } = useTranslation();
+
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const [recaptchaError, setRecaptchaError] = useState<string | null>(null);
+
+  const ValidationSchema = Yup.object({
+    name: Yup.string()
+      .trim()
+      .min(2, dict["form-validations"]["too-short"])
+      .required(dict["form-validations"].required),
+    company: Yup.string()
+      .trim()
+      .max(128, dict["form-validations"]["too-long"])
+      .optional(),
+    email: Yup.string()
+      .email(dict["form-validations"]["invalid-email"])
+      .required(dict["form-validations"].required),
+    phone: Yup.string()
+      .trim()
+      .matches(
+        // very lenient intl pattern; adjust to your needs
+        /^\+?[0-9\s().-]{7,}$/,
+        dict["form-validations"]["invalid-phone"]
+      )
+      .required(dict["form-validations"].required),
+    message: Yup.string()
+      .trim()
+      .min(10, dict["form-validations"]["more-detail"])
+      .required(dict["form-validations"].required),
+  });
 
   const defaultValues: FormValues = {
     name: "",
@@ -64,7 +75,7 @@ export const ContactForm: React.FC<Props> = ({
     // Grab the token (v2 Checkbox or v2 Invisible)
     const token = recaptchaRef.current?.getValue() || "";
     if (!token) {
-      setRecaptchaError("Please verify that you are not a robot.");
+      setRecaptchaError(dict.contacts["recaptcha-error"]);
       helpers.setSubmitting(false);
       return;
     }
@@ -87,20 +98,16 @@ export const ContactForm: React.FC<Props> = ({
       const data = await res.json();
 
       if (res.ok && data.success) {
-        toast.success(
-          "✅ Your message has been sent! Somebody from our team will reach you shortly."
-        );
+        toast.success(dict.contacts["email-success"]);
         helpers.resetForm();
         recaptchaRef.current?.reset();
       } else {
-        toast.error("❌ Failed to send your message. Please try again.");
+        toast.error(dict.contacts["email-error"]);
       }
     } catch (err: any) {
       // Show a friendly error
-      toast.error("⚠️ Something went wrong. Please try again later.");
-      setRecaptchaError(
-        err?.message || "Something went wrong. Please try again."
-      );
+      toast.error(dict.contacts["general-error"]);
+      setRecaptchaError(err?.message || dict.contacts["general-error"]);
       // It’s often good to reset the token after a failed submit:
       recaptchaRef.current?.reset();
     } finally {
@@ -126,7 +133,7 @@ export const ContactForm: React.FC<Props> = ({
           }}
         >
           <label className="font-semibold" htmlFor="name">
-            Name *
+            {dict.contacts["name"]} *
           </label>
           <Field
             className="input w-full"
@@ -137,7 +144,7 @@ export const ContactForm: React.FC<Props> = ({
           <ErrorMessage className="text-error" name="name" component="div" />
 
           <label className="font-semibold" htmlFor="company">
-            Company
+            {dict.contacts["company"]}
           </label>
           <Field
             className="input w-full"
@@ -160,7 +167,7 @@ export const ContactForm: React.FC<Props> = ({
           <ErrorMessage className="text-error" name="email" component="div" />
 
           <label className="font-semibold" htmlFor="phone">
-            Phone *
+            {dict.contacts["phone"]} *
           </label>
           <Field
             className="input w-full"
@@ -172,7 +179,7 @@ export const ContactForm: React.FC<Props> = ({
           <ErrorMessage className="text-error" name="phone" component="div" />
 
           <label className="font-semibold" htmlFor="message">
-            Message *
+            {dict.contacts["message"]} *
           </label>
           <Field
             as="textarea"
@@ -180,7 +187,7 @@ export const ContactForm: React.FC<Props> = ({
             name="message"
             className="textarea w-full"
             rows={5}
-            placeholder="How can we help?"
+            placeholder={dict.contacts["textarea-placeholder"]}
           />
           <ErrorMessage className="text-error" name="message" component="div" />
 
@@ -207,11 +214,13 @@ export const ContactForm: React.FC<Props> = ({
             disabled={isSubmitting}
             style={{ marginTop: 8 }}
           >
-            {isSubmitting ? "Sending…" : "Send message"}
+            {isSubmitting
+              ? dict.contacts["sending"]
+              : dict.contacts["send-message"]}
           </button>
 
           <p style={{ fontSize: 12, color: "#666", marginTop: 4 }}>
-            * required fields
+            * {dict.contacts["required-fields"]}
           </p>
         </Form>
       )}

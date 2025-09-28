@@ -1,10 +1,13 @@
 "use client";
 
 import { ContactForm } from "@/components/Forms/ContactForm";
+import { useTranslation } from "@/providers/TranslationProvider";
 import { AtIcon, MapPinIcon, PhoneIcon } from "@phosphor-icons/react/dist/ssr";
 import { motion } from "framer-motion";
 
 export const Contacts = () => {
+  const { dict, lang } = useTranslation();
+
   return (
     <div
       id="contacts"
@@ -22,7 +25,7 @@ export const Contacts = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              Contact Us
+              {dict.contacts.title}
             </motion.h2>
             <motion.h3
               className="heading-4xl"
@@ -31,7 +34,7 @@ export const Contacts = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             >
-              Let’s Talk About Your Next Project
+              {dict.contacts.subtitle}
             </motion.h3>
           </div>
 

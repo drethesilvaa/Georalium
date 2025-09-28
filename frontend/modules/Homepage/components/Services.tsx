@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import GlassCard from "@/components/GlassCard";
 import Slider from "@/components/Slider";
+import { useTranslation } from "@/providers/TranslationProvider";
 import {
   ChartBarIcon,
   FileTextIcon,
@@ -13,38 +14,39 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { motion } from "framer-motion";
 
-const servicesData = [
-  {
-    icon: <MagnifyingGlassIcon size={94} weight="duotone" />,
-    title: "Investment Prospecting & Evaluation",
-  },
-  {
-    icon: <FileTextIcon size={94} weight="duotone" />,
-    title: "Licensing & Contractual Process",
-  },
-  {
-    icon: <LeafIcon size={94} weight="duotone" />,
-    title: "Environmental Compliance",
-  },
-  {
-    icon: <TruckIcon size={94} weight="duotone" />,
-    title: "Logistics & Administrative Support",
-  },
-  {
-    icon: <ChartBarIcon size={94} weight="duotone" />,
-    title: "Market Research & Marketing",
-  },
-  {
-    icon: <ScalesIcon size={94} weight="duotone" />,
-    title: "Specialised Outsourcing & Legal Advice",
-  },
-  {
-    icon: <GraduationCapIcon size={94} weight="duotone" />,
-    title: "Training (Mining & Energy)",
-  },
-];
-
 export const Services = () => {
+  const { dict, lang } = useTranslation();
+
+  const servicesData = [
+    {
+      icon: <MagnifyingGlassIcon size={94} weight="duotone" />,
+      title: dict.services.service1,
+    },
+    {
+      icon: <FileTextIcon size={94} weight="duotone" />,
+      title: dict.services.service2,
+    },
+    {
+      icon: <LeafIcon size={94} weight="duotone" />,
+      title: dict.services.service3,
+    },
+    {
+      icon: <TruckIcon size={94} weight="duotone" />,
+      title: dict.services.service4,
+    },
+    {
+      icon: <ChartBarIcon size={94} weight="duotone" />,
+      title: dict.services.service5,
+    },
+    {
+      icon: <ScalesIcon size={94} weight="duotone" />,
+      title: dict.services.service6,
+    },
+    {
+      icon: <GraduationCapIcon size={94} weight="duotone" />,
+      title: dict.services.service7,
+    },
+  ];
   return (
     <div
       data-scroll-section
@@ -66,7 +68,7 @@ export const Services = () => {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="heading-3xl"
           >
-            From Prospecting to Production
+            {dict.services.title}
           </motion.h4>
           <motion.h3
             initial={{ opacity: 0, y: -20 }}
@@ -75,7 +77,7 @@ export const Services = () => {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="heading-5xl font-semibold"
           >
-            Services That Drive Growth
+            {dict.services.subtitle}
           </motion.h3>
           <motion.div className="grid mt-10">
             <Slider

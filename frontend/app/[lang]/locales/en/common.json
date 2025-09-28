@@ -1,0 +1,112 @@
+{
+  "navbar": {
+    "who-we-are": "Who We Are",
+    "what-we-do": "What We Do",
+    "solutions": "Tailored Solutions",
+    "get-in-touch": "Get in Touch"
+  },
+  "hero": {
+    "title1": "Powering Angola’s",
+    "title2": "Mining Future",
+    "subtitle": "From prospecting to operations, we provide the clarity, compliance, and local support you need to succeed in Angola",
+    "cta-button": "KNOW MORE",
+    "card1": {
+      "quote1": "We don’t just provide services,",
+      "quote2": "we become partners in your success"
+    },
+    "card2": {
+      "title": "On Going Projects"
+    },
+    "card3": {
+      "title": "Management Key Sustainable Projects in Angola"
+    }
+  },
+  "aboutus": {
+    "who-we-are": {
+      "title": "Who We Are",
+      "subtitle": "A Trusted Partner in Angola’s Mining & Energy",
+      "description": "is a local Angolan firm supporting the mining sector with specialized services for investors and operators—reducing risk and streamlining market entry.",
+      "bullet-points": {
+        "local-legal": "Local content & legal support",
+        "supply-chain": "Supply-chain mapping and operational readiness",
+        "investor-care": "Investor Care - insouring investment from start to repatriation of capital",
+        "legal-accounting": "Legal and Accounting services",
+        "tax": "Tax solutions",
+        "geological": "Geological Evaluation",
+        "environmental": "Environmental compliance and project evaluation"
+      },
+      "team": {
+        "title": " A Multi-Disciplinary Team Dedicated to Mining Excellence",
+        "subtitle": " International specialists with decades of experience; deep knowledge of mining standards."
+      },
+      "it": {
+        "title": "Bringing Efficiency Through Innovative IT Services",
+        "subtitle": "Technology that supports operations at every stage",
+        "card1-title": "Viability studies, tailor-made software, web/intranet/extranet",
+        "card2-title": "System administration, security, support & maintenance",
+        "card3-title": "Training (IT)"
+      }
+    }
+  },
+  "map": {
+    "title": "Our Presence and Our Partners Across"
+  },
+  "services": {
+    "title": "From Prospecting to Production",
+    "subtitle": "Services That Drive Growth",
+    "service1": "Investment Prospecting & Evaluation",
+    "service2": "Licensing & Contractual Process",
+    "service3": "Environmental Compliance",
+    "service4": "Logistics & Administrative Support",
+    "service5": "Market Research & Marketing",
+    "service6": "Specialised Outsourcing & Legal Advice",
+    "service7": "Training (Mining & Energy)"
+  },
+  "solutions": {
+    "title": "Solutions For Everyone",
+    "operator": {
+      "subtitle": "Operational Support That Reduces Risk",
+      "title": "Empowering Operators for Efficient Operations",
+      "imgAlt": "Operator in a site by aftabmirza",
+      "ctaButton": "Schedule an operations review",
+      "item1-title": "Project evaluation & economic models for monitoring",
+      "item2-title": "Logistics, administrative & operational support",
+      "item3-title": "Environmental compliance",
+      "item4-title": "Outsourcing (customs brokerage, IT, accounting, local contracting)"
+    },
+    "investor": {
+      "subtitle": "Turning Opportunities Into Sustainable Investments",
+      "title": "Supporting Investors with Clarity and Confidence",
+      "imgAlt": "People shaking hand in an office by aftabmirza",
+      "ctaButton": "Request investor pack",
+      "item1-title": "Investment portfolio sourcing / tailored prospecting",
+      "item2-title": "Project evaluation & risk screening",
+      "item3-title": "Licensing, local content & legal processes",
+      "item4-title": "Go-to-market and marketing support"
+    }
+  },
+  "contacts": {
+    "title":"Contact Us",
+    "subtitle":"Let’s Talk About Your Next Project",
+    "recaptcha-error": "Please verify that you are not a robot.",
+    "email-success": "✅ Your message has been sent! Somebody from our team will reach you shortly.",
+    "email-error": "❌ Failed to send your message. Please try again.",
+    "general-error": "⚠️ Something went wrong. Please try again later.",
+    "name": "Name",
+    "company": "Company",
+    "phone": "Phone",
+    "message": "Message",
+    "textarea-placeholder": "How can we help?",
+    "sending": "Sending...",
+    "send-message": "Send message",
+    "required-fields": "required fields"
+  },
+  "form-validations": {
+    "too-short": "Too short",
+    "too-long": "Too long",
+    "required": "Required",
+    "invalid-email": "Invalid email",
+    "invalid-phone": "Invalid phone number",
+    "more-detail": "Please provide a bit more detail"
+  }
+}

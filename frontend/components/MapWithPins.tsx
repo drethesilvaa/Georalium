@@ -2,6 +2,7 @@
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MapPinIcon } from "@phosphor-icons/react/dist/ssr";
+import { useTranslation } from "@/providers/TranslationProvider";
 
 /**
  * Pin positions are given in percentages (from the top-left of the image).
@@ -25,6 +26,8 @@ export function MapWithPins({
   pins,
   className = "",
 }: MapWithPinsProps) {
+  const { dict } = useTranslation();
+
   const [activeId, setActiveId] = React.useState<string | null>(null);
 
   // close any open label when clicking/tapping outside
@@ -171,7 +174,7 @@ export function MapWithPins({
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="heading-5xl max-w-[28ch]"
           >
-            Our Presence and Our Partners Across <span className="text-angola-red">Angola</span> 
+            {dict.map.title} <span className="text-angola-red">Angola</span> 
           </motion.p>
           <motion.p
             initial={{ opacity: 0, y: -20 }}
