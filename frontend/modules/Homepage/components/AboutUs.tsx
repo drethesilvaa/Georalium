@@ -11,68 +11,68 @@ const teamimagesData = [
     alt: "Figurine of Justice on Table in Office",
   },
   {
-    image: "/teamImages/pexels-divinetechygirl-1181438.jpg",
-    alt: "Group of Women Standing Near Desk",
+    image: "/teamImages/pexels-arvid-knutsen-1892648-3510993.jpg",
+    alt: "Photo of Excavator on Soil",
   },
-  {
-    image: "/teamImages/pexels-divinetechygirl-1181622.jpg",
-    alt: "Women Colleagues gathered inside Conference Room",
-  },
-  {
-    image: "/teamImages/adult-1867771_1920.jpg",
-    alt: "Adult, Construction, Hard hat image",
-  },
-  {
-    image: "/teamImages/pexels-pavel-danilyuk-8111876.jpg",
-    alt: "A Woman in Black Blazer Holding a Clipboard",
-  },
-  {
-    image: "/teamImages/pexels-fauxels-3184339.jpg",
-    alt: "Man Wearing Brown Suit Jacket",
-  },
-  {
-    image: "/teamImages/pexels-illustrate-digital-ug-924569584-19982408.jpg",
-    alt: "Worker at Construction Site",
-  },
-  {
-    image: "/teamImages/pexels-divinetechygirl-1181622.jpg",
-    alt: "Women Colleagues gathered inside Conference Room",
+ {
+    image: "/teamImages/OpenPitMine.jpeg",
+    alt: "A deep open-pit mine with several large haul trucks and excavators working on different levels, with pools of water visible at the bottom",
   },
   {
     image: "/teamImages/adult-1867771_1920.jpg",
     alt: "Adult, Construction, Hard hat image",
   },
   {
+    image: "/teamImages/pexels-mikael-blomkvist-8961259.jpg",
+    alt: "Man and Woman in Helmets and Reflective Vests Walking on a Construction Site",
+  },
+  {
+    image: "/teamImages/pexels-islandhopper-x-339537771-15109993.jpg",
+    alt: "Construction Worker in Front of Bulldozer",
+  },
+  {
+    image: "/teamImages/OpenPitMine2.jpeg",
+    alt: "A wide view of a large open-pit mining site showing multiple excavators and dump trucks operating on terraced levels of reddish-brown soil",
+  },
+  {
+    image: "/teamImages/OpenPitMine.jpeg",
+    alt: "A deep open-pit mine with several large haul trucks and excavators working on different levels, with pools of water visible at the bottom",
+  },
+  {
+    image: "/teamImages/DoosanExcavator.jpeg",
+    alt: "An orange Doosan excavator digging into a deep, muddy excavation pit while two workers stand on the upper edge of the slope in the background",
+  },
+  {
+    image: "/teamImages/pexels-quang-nguyen-vinh-222549-11669259.jpg",
+    alt: "A Man Looking at the Wall of a Cave",
+  },
+  {
+    image: "/teamImages/pexels-manuel-garcia-3090587-32594486.jpg",
+    alt: "Engineer in a Modern Underground Mine Tunnel",
+  },
+  {
+    image: "/teamImages/pexels-kefentse-molotsane-1957910-27533504.jpg",
+    alt: "water tanker",
+  },
+  {
+    image: "/teamImages/DoosanExcavator2.jpeg",
+    alt: "An orange Doosan excavator loading soil and rocks into a yellow CAT articulated dump truck on a muddy construction site surrounded by red earth",
+  },
+  {
+    image: "/teamImages/pexels-saravut-vanset-23514839-10410019.jpg",
+    alt: "Yellow and Black Heavy Equipment at the Site during Sunset",
+  },
+  {
     image: "/teamImages/pexels-pavel-danilyuk-8111876.jpg",
     alt: "A Woman in Black Blazer Holding a Clipboard",
   },
   {
-    image: "/teamImages/pexels-fauxels-3184339.jpg",
-    alt: "Man Wearing Brown Suit Jacket",
+    image: "/teamImages/pexels-kindelmedia-8486973.jpg",
+    alt: "Close Up Photo of Female Engineer",
   },
   {
-    image: "/teamImages/pexels-illustrate-digital-ug-924569584-19982408.jpg",
-    alt: "Worker at Construction Site",
-  },
-  {
-    image: "/teamImages/pexels-divinetechygirl-1181622.jpg",
-    alt: "Women Colleagues gathered inside Conference Room",
-  },
-  {
-    image: "/teamImages/adult-1867771_1920.jpg",
-    alt: "Adult, Construction, Hard hat image",
-  },
-  {
-    image: "/teamImages/pexels-pavel-danilyuk-8111876.jpg",
-    alt: "A Woman in Black Blazer Holding a Clipboard",
-  },
-  {
-    image: "/teamImages/pexels-fauxels-3184339.jpg",
-    alt: "Man Wearing Brown Suit Jacket",
-  },
-  {
-    image: "/teamImages/pexels-illustrate-digital-ug-924569584-19982408.jpg",
-    alt: "Worker at Construction Site",
+    image: "/teamImages/pexels-parinduan-10006261.jpg",
+    alt: "A Man Beside a Mining Truck",
   },
 ];
 
