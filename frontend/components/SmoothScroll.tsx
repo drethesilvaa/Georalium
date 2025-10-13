@@ -36,6 +36,10 @@ export default function SmoothScroll({ children }: Props) {
       setLoco(scroll);
       setLoading(false);
 
+      setInterval(() => {
+        scroll.update();
+      }, 2500);
+
       resizeHandler = () => scroll.update();
       window.addEventListener("resize", resizeHandler);
     })();
